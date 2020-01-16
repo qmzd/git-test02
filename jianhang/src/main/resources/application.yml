@@ -1,0 +1,32 @@
+server:
+  port: 8088
+
+spring:
+  application:
+    name: massageChange
+
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@127.0.0.1:1521:orcl
+    username: EHR
+    password: EHR
+    dbcp2:
+      min-idle: 1
+      initial-size: 1
+      max-total: 10000
+      max-wait-millis: 60000
+      max-idle: -1
+      min-evictable-idle-time-millis: 300000
+      time-between-eviction-runs-millis: 60000
+      validation-query: SELECT 1
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml
+  type-aliases-package: com.example.ccb.model
+  mapper-locations: classpath:mybatis/mapper/**/*.xml
+
+pagehelper:
+  helper-dialect: oracle
+  reasonable: "true"
+  row-bounds-with-count: "true"
+  offset-as-page-num: "true"
