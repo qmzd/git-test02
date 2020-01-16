@@ -27,6 +27,7 @@ public class ZhxmmzController {
     public RspMsg insert(){
         RspMsg insert = zhxmmzService.insert();
         System.out.println("3333333");
+        System.out.println("2222222222");
         return insert;
     }
 
