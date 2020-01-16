@@ -26,7 +26,7 @@ public class ZhxmmzController {
     @ApiOperation(value = "测试新增" ,notes = "测试框架可用性" )
     public RspMsg insert(){
         RspMsg insert = zhxmmzService.insert();
-        System.out.println("zs");
+        System.out.println("3333333");
         return insert;
     }
 
